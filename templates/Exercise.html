@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Exercise{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h2>Exercise</h2>
+  <div class="form-group">
+      <label for="exampleFormControlSelect1">Exercise Type</label>
+      <select class="form-control" id="exampleType">
+          <option>Running</option>
+          <option>Cycling</option>
+          <option>Hiking</option>
+          <option>Aerobics</option>
+          <option>Alpine Skiing</option>
+          <option>American Football</option>
+          <option>Aqua Aerobics</option>
+          <option>Archery</option>
+          <option>Arm Curls</option>
+          <option>Arm Extensions</option>
+          <option>Back Extensions</option>
+          <option>Backpacking</option>
+          <option>Badminton</option>
+      </select>
+
+      <form action="/duration/" method="post">
+          <label for="duration">Duration in minutes: </label>
+          <input id="duration" type="number" name="your_name" value="{{ duration }}">
+      </form>
+
+      <form action="/reps/" method="post">
+          <label for="reps">Reps: </label>
+          <input id="reps" type="number" name="your_name" value="{{ reps }}">
+      </form>
+  </div>
+</div>
+{% endblock %}

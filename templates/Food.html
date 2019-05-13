@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h2>Exercise</h2>
+  <div class="form-group">
+      <label for="exampleFormControlSelect1">Food Type</label>
+      <select class="form-control" id="exampleType">
+          <option>Cheese</option>
+          <option>Bread</option>
+          <option>Other</option>
+      </select>
+
+      <form action="/serving/" method="post">
+          <label for="serving">Serving: </label>
+          <input id="serving" type="number" name="your_name" value="{{ serving }}">
+      </form>
+  </div>
+</div>
+{% endblock %}
